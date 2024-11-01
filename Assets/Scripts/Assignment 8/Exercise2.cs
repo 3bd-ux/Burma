@@ -5,6 +5,7 @@ public class Exercise2 : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //funnySentence used to print on one line.
         string funnySentence = null;
         string[] abu7aidar = { "Cat", "Dog", "Car", "Pizza", "Hat", "Fish", "Tree", "Monkey", "Ball", "Bird" };
         string[] om7aidar = new string[7];
