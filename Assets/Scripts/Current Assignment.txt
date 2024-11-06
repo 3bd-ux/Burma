@@ -1,0 +1,14 @@
+
+Create the GameManager Class with “: MonoBehaviour”:
+1. Attach GameManager to a game object in your Unity scene.
+2. In the Start() method:
+a. Instantiate two Player objects.
+b. Call InitializePlayer() to set playerName and health for each
+Player object.
+c. Use both versions of the Heal() method to demonstrate method
+overloading.
+d. Call ShowPlayerCount() to display the total number of Player
+objects.
+
+Finally, push both Player.cs and GameManager.cs scripts to your GitHub
+repository and provide the link to each script.
