@@ -1,33 +1,35 @@
 using UnityEngine;
-
-public class Character
+namespace Assignment16
 {
-    private string _characterName;
-    public string CharacterName
+    public class Character
     {
-        get { return _characterName; }
-        set
+        private string _characterName;
+        public string CharacterName
         {
-            _characterName = value;
+            get { return _characterName; }
+            set
+            {
+                _characterName = value;
+            }
         }
-    }
 
-    private int health;
-    public int Health
-    {
-        get { return health; }
-        set
+        private int health;
+        public int Health
         {
-            if (value > 100) health = 100;
-            else if (value < 0) health = 0;
-            else health = value;
+            get { return health; }
+            set
+            {
+                if (value > 100) health = 100;
+                else if (value < 0) health = 0;
+                else health = value;
+            }
         }
-    }
 
 
-    public Character(string characterName, int characterHealth)
-    {
-        this.CharacterName = characterName;
-        this.Health = characterHealth;
+        public Character(string characterName, int characterHealth)
+        {
+            this.CharacterName = characterName;
+            this.Health = characterHealth;
+        }
     }
 }

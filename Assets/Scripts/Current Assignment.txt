@@ -50,10 +50,13 @@ c. Use the DRY (Do not Repeat Yourself) advice
 when writing these overloaded methods.
 
 Create Two Child Classes
-1. Inside the namespace, create two classes, Soldier and Officer, that inherit from
-Character.
-2. Each class should have a parameterized constructor that calls the base
-constructor to initialize the name, Health, and position.
+1. Inside the namespace, create two classes, 
+Soldier and Officer, that inherit from Character.
+
+2. Each class should have a parameterized 
+constructor that calls the base constructor
+to initialize the name, Health, and position.
+
 3. Override DisplayInfo in each child class to add Debug.Log(“Soldier”) for
 Soldier class and Debug.Log(“Officer”) for Officer class in the beginning of the
 method then call the base method using base.DisplayInfo() which calls the

@@ -1,4 +1,5 @@
 using System;
+using System.Reflection.Emit;
 using UnityEngine;
 
 namespace Assignment18
@@ -24,8 +25,6 @@ namespace Assignment18
             Debug.Log($"Health: {health}");
             position.printPosition();
         }
-
-
 
         public string name;// field
         protected Position position; //field
@@ -73,6 +72,13 @@ namespace Assignment18
         public float z;
 
 
+    }
+
+    public class Soldier
+    {
+        string name;
+        int health;
+        Position position;
     }
 
 }
