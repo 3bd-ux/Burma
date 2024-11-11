@@ -1,29 +1,71 @@
-Assignment 14: Basic Programming in C# (OOP 1)
-1) Create a Base Class (Character):
-● Create a class called Character that will be a base (or parent) class.
-● This class will have two properties:
-○ string Name: The character's name (for example, "Subhi" or
-"Zarifeh").
-○ int Health: The character's health (max is 100).
-● Use getters and setters for both properties to control and protect the
-information stored in them.
-● Make a constructor to set up the character's Name and Health when
-the character is created.
-2) Create a Player Class:
-● Make a Player class that inherits from the Character class.
-● Add a Heal() method that increases (or "heals") the player’s Health
-by a certain amount.
-3) Create an Enemy Class:
-● Make an Enemy class that also inherits from the Character class.
-● Add an Attack() method that lowers (or "attacks") the Health of
-another character by a specific amount.
+Assignment 16: Basic Programming in C# (OOP 1)
 
-4) Testing the Code in Unity:
-In Unity, create another script GameManager (which inherits from
-MonoBehavior) that will:
-● Create a Player and an Enemy character.
-● Print their Name and Health in the Unity Console.
-● Test the Heal() method on the player to increase their health (and
-print them).
-● Test the Attack() method on the enemy to reduce the player’s health
-(and print them).
+Create a Namespace
+1. Create a namespace, Assignment18, to organize all classes and the struct in
+this assignment.
+Define a Struct - Position
+1. Inside the namespace, create a struct named Position.
+2. Position should have two public fields (float X, float Y, and float Z) and a
+constructor to initialize these fields.
+3. Create a method printPosition to Debug.Log the x,y,z values.
+
+
+Create a Base Class - Character
+1. Inside the namespace, create a base class named Character.
+2. Add a public string name field, a private int health field, and a protected
+Position position field of the struct type created above.
+3. Create a property for Health. Implement custom logic in the get and set to limit
+the private field value health to a minimum 0 value or maximum 100 value.
+
+بدك تعمل 2 كونستركتور لكلاس كاراكتر،
+ واحد منهم براميترز(اسم، هيلث، موقع)
+ ،كمان واحد فاضي
+4. Create two constructors for Character; 
+one parameterized constructor that initializes
+name,health, and position),
+and the other without parameters.
+
+Use constructor chaining in the constructor
+without the parameter to call the
+parameterized constructor 
+with default values
+: this( “No name”, 100, new Position (0,0,0)).
+
+5. Create a virtual method named 
+DisplayInfo that uses Debug.Log to display
+name, Health, and position 
+(using the printPosition of the struct).
+
+
+6. Create two overloaded methods named Attack:
+
+a. One version takes two parameters; int damage 
+and Character target
+
+b. The second version takes int damage, Character 
+target and string attackType 
+for example shooting or kicking, etc.
+
+c. Use the DRY (Do not Repeat Yourself) advice 
+when writing these overloaded methods.
+
+Create Two Child Classes
+1. Inside the namespace, create two classes, Soldier and Officer, that inherit from
+Character.
+2. Each class should have a parameterized constructor that calls the base
+constructor to initialize the name, Health, and position.
+3. Override DisplayInfo in each child class to add Debug.Log(“Soldier”) for
+Soldier class and Debug.Log(“Officer”) for Officer class in the beginning of the
+method then call the base method using base.DisplayInfo() which calls the
+base method in the Character class from its child.
+
+Create a MonoBehaviour CharacterTest Class for Testing
+1. Inside the same namespace, create a new class named CharacterTest that
+inherits from MonoBehaviour. This class will be attached to a GameObject in
+Unity to test the code.
+2. In CharacterTest, create instances of Soldier and Officer and store them in a
+Character[] array. Use the parameterized constructor of Officer and non
+parameterized constructor of the Soldier to instantiate them.
+3. Use a for loop to call DisplayInfo on each element in the array, demonstrating
+polymorphism.
+Push to github and the share the link
