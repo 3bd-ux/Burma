@@ -57,18 +57,26 @@ Soldier and Officer, that inherit from Character.
 constructor that calls the base constructor
 to initialize the name, Health, and position.
 
-3. Override DisplayInfo in each child class to add Debug.Log(“Soldier”) for
-Soldier class and Debug.Log(“Officer”) for Officer class in the beginning of the
-method then call the base method using base.DisplayInfo() which calls the
-base method in the Character class from its child.
+3. Override DisplayInfo in each child class 
+to add Debug.Log(“Soldier”) for
+Soldier class and Debug.Log(“Officer”) for Officer class
+ in the beginning of the method then call the
+base method using base.DisplayInfo() 
+which calls the base method in the Character class
+ from its child.
 
 Create a MonoBehaviour CharacterTest Class for Testing
-1. Inside the same namespace, create a new class named CharacterTest that
-inherits from MonoBehaviour. This class will be attached to a GameObject in
+1. Inside the same namespace, create a new class 
+named CharacterTest that inherits from MonoBehaviour. 
+This class will be attached to a GameObject in
 Unity to test the code.
-2. In CharacterTest, create instances of Soldier and Officer and store them in a
-Character[] array. Use the parameterized constructor of Officer and non
-parameterized constructor of the Soldier to instantiate them.
-3. Use a for loop to call DisplayInfo on each element in the array, demonstrating
-polymorphism.
+
+2. In CharacterTest, create instances of Soldier 
+and Officer and store them in a Character[] array.
+ Use the parameterized constructor of Officer 
+ and non parameterized constructor of the Soldier
+  to instantiate them.
+
+3. Use a for loop to call DisplayInfo on each element
+ in the array, demonstrating polymorphism.
 Push to github and the share the link

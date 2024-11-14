@@ -1,4 +1,5 @@
 using UnityEngine;
+using Assignment16;
 public class Enemy : Character
 {
     public Enemy(string characterName, int characterHealth) : base(characterName, characterHealth)
