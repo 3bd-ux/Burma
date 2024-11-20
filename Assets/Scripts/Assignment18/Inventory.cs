@@ -8,17 +8,12 @@ public class Inventory
     {
         itemNames.Add(item);
     }
+
     public string ShowItems()
     {
-        string ALL_ITEMS_IN_iNVENTORY = null;
-        foreach (string name in itemNames)
-        {
-            ALL_ITEMS_IN_iNVENTORY += name;
-            ALL_ITEMS_IN_iNVENTORY += ", ";
-        }
-        ALL_ITEMS_IN_iNVENTORY.TrimEnd();
-        return ALL_ITEMS_IN_iNVENTORY;
+        return string.Join(", ", itemNames) + ".";
     }
+
     public static Inventory operator +(Inventory obj1, Inventory obj2)
     {
         Inventory obj = new();
