@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using Assignment24;
 public class RacingGame : MonoBehaviour
 {
     [SerializeField] private RaceState raceState;
@@ -7,8 +7,8 @@ public class RacingGame : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        previousRaceState = raceState; 
-        SimulateRace(); 
+        previousRaceState = raceState;
+        SimulateRace();
     }
 
     // Update is called once per frame

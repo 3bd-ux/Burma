@@ -1,10 +1,12 @@
 using UnityEngine;
-
-public enum RaceState
+namespace Assignment24
 {
-    Start,
-    Accelerate,
-    Turn,
-    Crash,
-    Finish
+    public enum RaceState
+    {
+        Start,
+        Accelerate,
+        Turn,
+        Crash,
+        Finish
+    }
 }
