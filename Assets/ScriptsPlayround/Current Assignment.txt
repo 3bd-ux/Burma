@@ -1,0 +1,61 @@
+Assignment 24: Basic Programming in C# - Simple Racing Text Game
+
+Read the two pages!
+
+Objective:
+Create a simple racing text game in Unity using C# to practice Enums, switch-case, and
+default statements. The game will display messages using Debug.Log to simulate the
+progress of a race.
+
+Instructions:
+1. Create an Enum Script (just an enum):
+○ Create a new C# script named RaceState.
+○ In it define an Enum called RaceState with the following values:
+■ Start
+■ Accelerate
+■ Turn
+■ Crash
+■ Finish
+2. Create the Main Script:
+○ Create a new C# script named RacingGame that inherits from MonoBehaviour.
+○ Inside this script:
+■ Declare a public RaceState variable called raceState.
+■ Write a method called SimulateRace() that handles the race logic
+using a switch statement. Add a default case to handle undefined
+states.
+■ Use the Update() method to call the SimulateRace() method,
+allowing real-time updates when the raceState variable is modified in
+the Unity Inspector.
+■ Example Cases and Outputs (In green):
+● Start:
+The race is about to begin. Get ready!
+● Accelerate:
+You press the gas pedal. The car speeds up!
+
+Page 2 of 2
+
+● Turn:
+You approach a sharp turn. Be careful not to
+crash!
+● Crash:
+You hit a barrier. The race is over.
+● Finish:
+You crossed the finish line. Well done!
+● Default Case (i.e undefined state):
+This state is not defined. Something is wrong.
+
+3. Test the Game:
+○ Attach the RacingGame script to any GameObject in your Unity scene.
+○ In its Inspector use the dropdown menu to select different RaceState values.
+○ Run the game and observe the Console output.
+
+4. Submit to GitHub. And include a link to the GitHub folder in the repository in the
+assignment.
+
+5. Take a Screenshot of the entire Unity Editor to show:
+○ The GameObject with the RacingGame script attached, visible in the Inspector
+with the raceState dropdown showing the current value.
+○ The Console showing the output for the selected state.
+○ Make sure to upload the screenshot file to the assignment.
+
+Good Luck!
