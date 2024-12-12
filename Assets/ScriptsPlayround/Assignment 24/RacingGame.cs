@@ -14,10 +14,10 @@ public class RacingGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (raceState != previousRaceState) // Check if the state has changed
+        if (raceState != previousRaceState)
         {
             SimulateRace();
-            previousRaceState = raceState; // Update the previous state
+            previousRaceState = raceState; 
         }
     }
     private void SimulateRace()

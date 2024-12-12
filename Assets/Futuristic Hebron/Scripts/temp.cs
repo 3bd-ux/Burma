@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class temp : MonoBehaviour
+public class currentRigidbody : MonoBehaviour
 {
     float steerSpeed = 15f;
     public Transform wheelFrontRight;
