@@ -24,7 +24,7 @@ public class RocketLaunch : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && !isLaunching)
         {
             isLaunching = true;
-            audioController.PlayAudio();
+            audioController.PlayAudio(); /////////////////// enable for audio
         }
 
         if (isLaunching && countdown > 0)
