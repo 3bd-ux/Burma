@@ -1,179 +1,123 @@
-Page 1 of 9 
-Assignment 29 
-This assignment is divided into 7 parts. 
-Follow the instructions carefully and add all your scripts to the namespace Assignment29. 
-Part 1: 
-Objective: Practice foundational C# concepts (var, ternary operators, string interpolation, and System.DateTime). 
-1. Script Setup 
-○ Create a script called BasicsScript. 
-○ Inherit from MonoBehaviour. 
-○ Attach the script to an empty GameObject in Unity. 
-2. Specific Requirements 
-○ Declare three variables using var (an integer, a string, and a boolean). ○ Use the ternary operator ?: to check if the integer is even or odd. 
-○ Use string interpolation to create a message such as "The number 5 is odd." and log it using Debug.Log. 
-○ Log the current date using System.DateTime. 
-○ Log the current time using System.DateTime. 
-○ Log the current day using System.DateTime. 
-Reminder: Test this script in Unity Play Mode.
-Page 2 of 9 
-Part 2: 
-1. Custom Class Requirements 
-○ Create a class called CustomObject (not a MonoBehaviour class) with: ■ Properties: 
-■ ID (integer). 
-■ Name (string). 
-■ A constructor to initialize ID and Name. 
-■ An overridden ToString() method that returns a formatted string, as "Object [ID: 1, Name: Example]". 
-■ [Optional] An overridden Equals(object obj) method to compare two CustomObject instances. Then please comment out this entire 
-method! 
-■ [Optional] Overloaded == and != operators to check equality between two objects of type CustomObject. 
-2. Testing Script Requirements 
-○ Create a separate script that: 
-■ Inherits from MonoBehaviour. 
-■ Is attached to an empty GameObject in Unity. 
-■ Instantiates one CustomObject instance with a specific ID and a Name. ■ Logs the instance object using the print() method. 
-■ [Optional] Instantiates another CustomObject instance and logs the results of comparing the objects using the == and != operators, using the print() method. 
-Reminder: Test this script in Unity Play Mode.
-Page 3 of 9 
-Part 3: Static Classes and Extension Methods 
-Objective: Create a static class and explore the power of params and extension methods. 
-1. Static Class Requirements 
-○ Create a static class called Utilities that: 
-■ Adds a static method Add(params int[] numbers) that calculates and returns the sum of an array of numbers. 
-2. Extension Method Requirements 
-○ Add an extension method in the Utilities class: 
-■ Write an extension method called RepeatString that repeats a string a specific number of times. 
-Example: "Hello".RepeatString(3) should return 
-"HelloHelloHello". 
-3. Testing Script Requirements 
-○ Create a script that: 
-■ Inherits from MonoBehaviour. 
-■ Is attached to an empty GameObject in Unity. 
-■ Uses the Utilities.Add method to log the sum of numbers. 
-■ Uses the RepeatString extension method with any string to log that string repeated n times on the same line (look at the example above). 
-Reminder: Test this functionality in Unity Play Mode.
-Page 4 of 9 
-Part 4: Type Casting 
-Script Setup 
-1. Create a script called TypeManagementScript. 
-2. The script should inherit from MonoBehaviour. 
-3. Attach the script to an empty GameObject in Unity. 
-Specific Requirements 
-1. Type Casting 
-Objective: Practice upcasting and downcasting using as. 
-1. Create a Base Class Animal: 
-○ Add a virtual method MakeSound() that logs "Animal sound". 
-○ Add a method Move() that logs "Animal moves.". 
-2. Create a Derived Class Cat: 
-○ Override the MakeSound() method to log "Meow!". 
-○ Override the Move() method to log "Cat runs quickly.". 
-3. Write the Code: 
-○ Upcasting: 
-■ Create a Cat object and upcast it (implicitly) to an Animal reference. ■ Call both MakeSound() and Move() on the upcasted reference. 
-○ Downcasting: 
-■ Downcast the Animal reference back to a Cat object using the as 
-keyword. 
-■ Call both MakeSound() and Move() on the downcasted object. 
-2. Type Checking 
-Objective: Practice using the is keyword to check object types 
-1. Create an Interface ICanFight: 
-○ Add a method Attack(). 
-2. Implement ICanFight in the Cat Class: 
-○ Add an Attack() method that logs "Cat attacks with claws!". 3. Create a New Class Warrior: 
-○ Implement the ICanFight interface. 
-○ Add an Attack() method that logs "Warrior attacks with a sword!".
-Page 5 of 9 
-4. Write the Code: 
-○ Create a List of ICanFight objects containing instances of both Cat and Warrior. 
-○ Iterate through the list and call Attack() on each object. 
-○ Use the is keyword to check whether the current object is a Cat or a Warrior. ○ Log "The object is a Cat." or "The object is a Warrior." based on the result of checking. 
-Reminder: Test this script in Unity Play Mode. 
-Expected Unity Console Output 
-Meow! 
-Animal moves. 
-Meow! 
-Cat runs quickly. 
-Cat attacks with claws! 
-Warrior attacks with a sword! 
-The object is a Cat. 
-The object is a Warrior.
-Page 6 of 9 
-Part 5: Exception Handling 
-Objective: Simulate error handling. 
-1. Set up a Score Calculation Scenario: 
-○ Declare two int variables: 
-■ playerScore = 100. 
-■ diviser = 0 (intentionally set to 0 to simulate division by zero). 
-2. Add a Try-Catch-Finally Block: 
-○ Try Block: 
-■ Attempt to calculate the player's total score by dividing playerScore by diviser. 
-■ Use the formula: int totalScore = playerScore / diviser; ■ Log "Attempting to calculate score multiplier...". 
-○ Catch Block: 
-■ Catch the DivideByZeroException. 
-■ Log an error message: "Error: Division by zero occurred 
-while calculating score multiplier.". 
-○ Finally Block: 
-■ Log "Score calculation complete. Cleaning up 
-resources.". 
-Expected Unity Console Output 
-Attempting to calculate score multiplier... 
-Error: Division by zero occurred while calculating score multiplier. Score calculation complete. Cleaning up resources.
-Page 7 of 9 
-Part 6: Unity Lifecycle and Object Interaction 
-Objective 
-Practice Unity lifecycle methods, GameObject interactions, scene object discovery, and destruction of GameObjects using Unity's print() method. 
-Script Setup 
-1. Create a script named UnitySpecificScript. 
-2. Ensure the script inherits from MonoBehaviour. 
-3. Attach the script to an empty GameObject in your Unity scene. 
-4. Add another empty GameObject: 
-○ Name it "Joker". 
-○ Assign the "Joker" tag to it in the Unity Inspector. 
-5. Add a third GameObject to the scene: 
-○ Name it "TargetObject". 
-6. Add a new Light object (no matter what kind of light is) to the scene (if there is no light in the scene) to test object discovery by type. 
-How to Add the "Joker" Tag 
-1. Select the "Joker" GameObject in the Hierarchy. 
-2. In the Inspector, click the Tag dropdown and select Add Tag.... 
-3. In the Tags and Layers window, click +, type "Joker", and press Enter. 4. Return to the Inspector, open the Tag dropdown, and assign the "Joker" tag to the GameObject. 
-Specific Requirements 
-1. Lifecycle Methods 
-1. Use the OnEnable() method to print() "GameObject Enabled" when the GameObject is enabled in the scene. 
-2. Use the OnDisable() method to print() "GameObject Disabled" when the GameObject is disabled in the scene. 
-3. Use the Start() method to print() "Game started!" when the game begins (Play Mode). 
-2. GameObject Interaction 
-1. Use SetActive() to deactivate another GameObject when the "D" key is pressed.
-Page 8 of 9 
-2. print() "TargetObject deactivated!" to confirm that the object has been deactivated. 
-3. Finding Objects 
-1. Use GameObject.Find() to locate "TargetObject" by its name. print() the name of the object if found, or print() "No TargetObject found." if it doesn’t exist. 
-2. Use GameObject.FindGameObjectWithTag() to locate the "Joker" object by its tag. 
-print() the name of the object if found, or log "No Joker object found." if it doesn’t exist. 
-3. Use GameObject.FindObjectOfType<>() to locate an object of type Light. print() the name of the object if found, or log "No Light object found." if it doesn’t exist. 
-Expected Unity Console Output 
-GameObject Enabled 
-Game started! 
-Found object by name: TargetObject 
-Found object by tag: Joker 
-Found object of type Light: Directional Light 
-TargetObject deactivated! 
-GameObject Disabled
-Page 9 of 9 
-Part 7: Recursion 
-Objective: Practice recursion by implementing Fibonacci calculations. 
-1. Script Setup 
-○ Create a script called RecursionScript. 
-○ Inherit from MonoBehaviour. 
-○ Attach the script to an empty GameObject in Unity. 
-2. Specific Requirements 
-○ Write a recursive method FibonacciRecursive(int n) that calculates the nth Fibonacci number. 
-○ Write an iterative method (using a loop) FibonacciIterative(int n) that calculates the nth Fibonacci number using a loop. 
-○ Log the results of both methods for n = 10 and n = 30. 
-Reminder: Test this script in Unity Play Mode and log all outputs in the Console. 
-Submission Guidelines 
-1. GitHub Submission: 
-○ Create a directory named Assignment29 in your GitHub repository. 
-○ Add all your scripts to this directory. 
-○ Submit the GitHub link to our Google Classroom. 
-2. Unity Console Snapshots: 
-○ Take snapshots of all Unity Console outputs for each part of the assignment. ○ Upload the snapshots to our Google Classroom. 
-Good luck!
+Part 4: Sorting a List<int> in Reverse Order 
+Using List.Sort with CompareTo and a Lambda Expression 
+Objective: 
+Sort a list of integers in descending order using 
+List.Sort with a lambda expression and verify the
+ results by printing the
+ sorted list in one line. 
+Instructions: 
+1. Create a Script: 
+● Create a new script in Unity and name it ListMethodsExample.
+ 2. Create a List of Integers: 
+● Initialize a List<int> named numbers and populate 
+it with several integer values. 
+3. Call the Sort Method and Pass a Lambda Expression: 
+● Use the Sort method on the list and pass a lambda expression to compare two integers, x and y, in reverse order. 
+● Use y.CompareTo(x) in the lambda expression to swap the 
+default comparison order. 
+4. Print the Results: 
+● Use string.Join(", ", numbers) to convert the sorted list into 
+a single string with elements separated by commas. 
+● Log the result to the Console in one line.
+Page 7 of 13 
+Expected Console Output: 
+For a list initialized as: 
+List<int> numbers = new List<int> { 3, 1, 4, 1, 5, 9 };
+ The Console output should be: 
+9, 5, 4, 3, 1, 1
+Page 8 of 13 
+Part 5: Using List.FindAll in C# 
+Objective: 
+Learn how to use the List.FindAll method to filter
+ elements in a list based on a specified condition. 
+Instructions: 
+1. Create a List of Integers: 
+● In the same previous script ListMethodsExample Initialize 
+a List<int> named numbers2 and populate it with several 
+integer values. 
+2. Use the FindAll Method: 
+● Use the FindAll method to create a new list filteredNumbers
+ containing only the elements that satisfy the condition to 
+ find all even numbers. 
+● Pass a lambda expression to the FindAll method to define the 
+condition (i.e find all even numbers). 
+3. Print the Results: 
+● Use string.Join(", ", filteredNumbers) to convert the filtered 
+list into a single string and log it to the Console. 
+Expected Console Output: 
+For a list initialized as: 
+List<int> numbers2 = new List<int> { 3, 1, 4, 1, 5, 9, 2, 6 }; 
+The Console output for finding even numbers should be: 
+4, 2, 6
+Page 9 of 13 
+Part 6: Using UnityEvent and AddListener() in Unity 
+Objective: 
+Learn how to use UnityEvent and AddListener() to create and handle custom events programmatically. 
+Instructions: 
+1. Create a Script: 
+● Create a new script in Unity and name it UnityEventExample. 
+2. Add a UnityEvent Field: 
+Declare a public UnityEvent field in your script to hold the custom event. e 
+3. Initialize the UnityEvent: 
+Inside the Start method, initialize it. 
+onEventTriggered = new UnityEvent(); 
+4. Add a Listener Programmatically: 
+Use the AddListener method to attach a method to the UnityEvent. Hint: 
+onEventTriggered.AddListener(OnEventResponse);
+Page 10 of 13 
+5. Trigger the UnityEvent: 
+In the Update() method Use the Invoke method to call the event programmatically, when the Spacebar key is pressed. 
+6. Write the Listener Method: 
+Create a method that logs to the Console "The event has been triggered!" when the event is triggered. 
+Expected Console Output: 
+When the event is triggered (by pressing the Space key), the Console should display: 
+The event has been triggered!
+Page 11 of 13 
+Part 7: Method Chaining in Unity 
+Objective: 
+Learn how to implement and use method chaining in Unity by creating methods that return the current instance of the class (this), enabling chained method calls. 
+Instructions: 
+1. Create a Script: 
+● Create a new script in Unity and name it MethodChainingExample. 
+2. Define a Class with Chainable Methods: 
+● Create a class with the following methods that return the current instance (this) to allow chaining: 
+○ SetPosition(Vector3 position): Updates the GameObject’s position. ○ SetRotation(Vector3 rotation): Updates the GameObject’s rotation. ○ SetScale(Vector3 scale): Updates the GameObject’s scale. 
+Hints: 
+● Use transform.position, transform.rotation, and transform.localScale to modify the GameObject's properties. 
+● Return the current instance using return this; at the end of each method.
+Page 12 of 13 
+3. Use Method Chaining: 
+● In the Start method, chain the methods together to set the position, rotation, and scale of the current gameObject. 
+○ Call the methods one after the other in a single chain: 
+void Start() 
+{ 
+SetPosition(new Vector3(0, 1, 0)) 
+.SetRotation(new Vector3(45, 0, 0)) 
+.SetScale(new Vector3(2, 2, 2)); 
+} 
+Expected Behavior in Unity: 
+When the scene starts: 
+● The GameObject's position will be updated to (0, 1, 0). 
+● Its rotation will be set to 45° on the X-axis. 
+● Its scale will be updated to (2, 2, 2).
+Page 13 of 13 
+Part 8: Abstract Classes in C# 
+Objective: 
+Learn how to define and use abstract classes by creating a base class with abstract methods and deriving concrete classes from it. 
+Instructions: 
+1. Create an Abstract Base Class: 
+● Create a script and name it AbstractBaseClass. 
+● Define an abstract class with one abstract method void PerformAction() and one concrete void PrintInfo() method. 
+● Use the abstract keyword to declare the class and the abstract method. 
+2. Create a Derived Class: 
+● Create another script and name it DerivedClassExample. 
+● Inherit from the AbstractBaseClass. 
+● Implement the abstract method in the derived class. 
+● Use the override keyword to implement the abstract method. 
+3. Test the Implementation: 
+● Create a TestAbstractClass that is derived from the MonoBehaviour class and attach it to a GameObject in your Unity scene. 
+● In the Start method of the TestAbstractClass class, call both the implemented abstract method and the concrete method from the derived class. PerformAction(); PrintInfo(); 
+Expected Console Output: 
+When the scene starts, you should see: 
+PerformAction is implemented in the derived class. 
+This is a concrete method in the abstract base class. Good luck!

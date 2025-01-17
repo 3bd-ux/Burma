@@ -10,8 +10,8 @@ namespace Assignment35
         void Start()
         {
             logMessage = (string message) => { Debug.Log(message); };
-            square = (int num) => { return num * num; };
-            isEven = (int num) => { return num % 2 == 0; };
+            square = (int num) => num * num;
+            isEven = (int num) => num % 2 == 0;
 
             logMessage("Hello from Action delegate!");
             Debug.Log($"Square: {square(5)}");
